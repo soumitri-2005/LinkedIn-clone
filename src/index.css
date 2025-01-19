@@ -13,6 +13,7 @@
   --font-bold-color: #191919;
   --font-light-color: #666666;
   --search-back-color: #edf3f8;
+  --hover-back-color: whitesmoke;
 }
 
 /* [dark-theme= 'dark'] {
