@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --background-color-one: #F4F2EE;
+  --background-color-two: #FFFFFF;
+  --font-bold-color: #191919;
+  --font-light-color: #666666;
+}
+
+
+[dark-theme= 'dark'] {
+  --background-color-one: #000000;
+  --background-color-two: #1B1F23;
+  --font-bold-color: #E9E9E9;
+  --font-light-color: #BBBCBD;
+}
