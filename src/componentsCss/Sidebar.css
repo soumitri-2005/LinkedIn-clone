@@ -2,6 +2,7 @@
     border-radius: 10px;
     text-align: center;
     height: fit-content;
+    width: 270px;
 }
 
 .sidebar-top {
@@ -36,6 +37,7 @@
 .top-profile h2 {
     font-size: 17px;
     margin-bottom: 4px;
+    cursor: pointer;
 }
 
 .top-profile h4 {

@@ -18,7 +18,7 @@ const Header = () => {
         <img src={linedinLogo} alt="" />
         <div className="header-search">
           <SearchIcon />
-          <input type="text" />
+          <input type="text" placeholder="Search"/>
         </div>
       </div>
 
