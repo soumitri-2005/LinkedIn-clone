@@ -1,5 +1,6 @@
 .feed {
     display: flex;
+    flex-direction: column;
     width: 550px;
     margin-left: 20px;
     margin-right: 20px;
@@ -51,4 +52,11 @@
 .input-icons {
     display: flex;
     justify-content: space-evenly;
+}
+
+hr {
+    margin: 0;
+    width: 98%;
+    border-top: 1px solid var(--font-light-color);
+    margin: 12px auto 0;
 }
