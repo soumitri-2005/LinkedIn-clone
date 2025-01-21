@@ -21,7 +21,6 @@ function Post({ name, description, message, photoUrl }) {
 
       <hr />
 
-
       <div className="post-buttons">
         <InputOptions Icon={ThumbUpAltOutlined} title="Like" color="var(--font-bold-color)" />
         <InputOptions Icon={ChatOutlined} title="Like" color="var(--font-bold-color)" />
