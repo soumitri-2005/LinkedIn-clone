@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../componentsCss/Feed.css";
 import { Avatar } from "@mui/material";
 import InputOptions from "./InputOptions";
@@ -6,12 +6,34 @@ import PermMediaIcon from "@mui/icons-material/PermMedia";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ArticleIcon from "@mui/icons-material/Article";
 import Post from "./Post";
+import { db } from "../firebase";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
 function Feed() {
+  const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapshot) => 
+      setPosts(
+      snapshot.docs.map((doc) => ({
+        id: doc.id,
+        data: doc.data(),
+      }))
+    ))
+  }, []);
 
   const sendPost = (e) => {
     e.preventDefault();
+
+    db.collection('posts').add({
+      name: 'Sony Singh',
+      description: 'This is a test',
+      message: input,
+      photoUrl: '',
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    })
   }
 
   return (
@@ -21,6 +43,8 @@ function Feed() {
           <Avatar />
           <form>
             <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
               type="text"
               placeholder="Start a post, try writing with AI"
             />
@@ -43,10 +67,15 @@ function Feed() {
       <hr />
 
       {/* post */}
-      {posts.map((post) => (
-        <Post />
+      {posts.map(({ id, data: { name, description, message, photoUrl }}) => (
+        <Post
+        key={id}
+        name={name}
+        description={description}
+        message={message}
+        photoUrl={photoUrl} 
+        />
       ))}
-      <Post name="Sony Singh" description="This is a test" message="Hello" />
     </div>
   );
 }
