@@ -17,12 +17,15 @@
   --hover-back-color: whitesmoke;
 }
 
-/* [dark-theme= 'dark'] {
+[dark-theme= 'dark'] {
   --background-color-one: #000000;
   --background-color-two: #1B1F23;
   --font-bold-color: #E9E9E9;
   --font-light-color: #BBBCBD;
   --search-back-color: #384345;
   --hover-back-color: #19191961;
-} */
+}
 
+body {
+  background-color: var(--background-color-one);
+}
