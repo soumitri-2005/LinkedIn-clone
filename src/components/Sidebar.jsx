@@ -4,8 +4,12 @@ import { Avatar } from "@mui/material";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import backPic from "../assets/linkedin bg (2).png";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
 
 const Sidebar = () => {
+  const user = useSelector(selectUser);
+
   const recentitem = (topic) => {
     return (
       <div className="sidebar-recent-item">
@@ -20,11 +24,11 @@ const Sidebar = () => {
       <div className="sidebar-top">
         <div className="top-profile">
           <img src={backPic} alt="" />
-          <Avatar className="sidebar-avatar" />
-          <h2>Soumitri Mishra</h2>
-          <h4>
-            B.Tech. CSE Student at ABIT | Aspiring <br /> Web Developer
-          </h4>
+          <Avatar className="sidebar-avatar" src={user.photoUrl}>
+            {user.email[0]}
+          </Avatar>
+          <h2>{user.displayName}</h2>
+          <h4>{user.email}</h4>
         </div>
 
         <div className="top-stats">

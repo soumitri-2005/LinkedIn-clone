@@ -17,7 +17,12 @@
 }
 
 .header-option-icon {
-    object-fit: contain;
-    height: 30px !important;
-    width: 30px !important;
+  object-fit: contain;
+  height: 30px !important;
+  width: 30px !important;
+  cursor: pointer !important;
+}
+
+.header-option h3 {
+  cursor: pointer;
 }
