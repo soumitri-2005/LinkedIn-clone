@@ -2,16 +2,45 @@ import React, { useState } from "react";
 import "../componentsCss/Login.css";
 import linkedinImg from "../assets/Linkedin-img.png";
 import { auth } from "../firebase";
+import { useDispatch } from "react-redux";
+import { login } from "../features/userSlice";
 
 function Login() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [profilePic, setProfilePic] = useState("");
+  const dispatch = useDispatch();
 
   const logInToApp = (e) => {
     e.preventDefault();
   };
-  const register = () => {};
+  const register = () => {
+    if (!name) {
+      return alert("Please enter a full name!");
+    }
+
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        userAuth.user
+          .updateProfile({
+            displayName: name,
+            photoURL: profilePic,
+          })
+          .then(() => {
+            dispatch(
+              login({
+                email: userAuth.user.email,
+                uid: userAuth.user.uid,
+                displayName: name,
+                photoURL: profilePic,
+              })
+            );
+          });
+      })
+      .catch((error) => alert(error));
+  };
 
   return (
     <div className="login">
@@ -23,7 +52,12 @@ function Login() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <input type="text" placeholder="Profile pic URl (optional)" />
+        <input
+          type="text"
+          placeholder="Profile pic URl (optional)"
+          value={profilePic}
+          onChange={(e) => setProfilePic(e.target.value)}
+        />
         <input
           type="email"
           placeholder="Email"
