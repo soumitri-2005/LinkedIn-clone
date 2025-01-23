@@ -3,9 +3,10 @@ import "./App.css";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
+import Login from "./components/Login";
+import Widgets from "./components/Widgets";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
-import Login from "./components/Login";
 import { auth } from "./firebase";
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
         <div className="app-body">
           <Sidebar />
           <Feed />
-          {/* widgets */}
+          <Widgets />
         </div>
       )}
     </div>
