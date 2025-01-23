@@ -3,6 +3,7 @@ import "../componentsCss/Widgets.css";
 import crossClimb from "../assets/crossclimb-img.jpg";
 import queens from "../assets/queens-img.jpg";
 import pinPoint from "../assets/pinpoint-img.jpg";
+import linkedIn from "../assets/Linkedin-img.png";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 function Widgets() {
@@ -66,7 +67,31 @@ function Widgets() {
           </div>
         </div>
       </div>
-      <div className="widgets-bottom"></div>
+
+      <div className="widgets-bottom">
+        <div className="bottom-about">
+          <p>
+            <span>About</span> <span>Accessibility</span>{" "}
+            <span>Help Center</span>
+          </p>
+          <p>
+            <span>Privacy & Terms</span>
+            <span>Ad Choices</span>
+          </p>
+          <p>
+            <span>Advertising</span>
+            <span>Business Services</span>
+          </p>
+          <p>
+            <span>Get the LinkedIn app</span>
+            <span>More</span>
+          </p>
+        </div>
+        <div className="bottom-footer">
+          <img src={linkedIn} alt="" />
+          <p>LinkedIn Corporation © 2025</p>
+        </div>
+      </div>
     </div>
   );
 }

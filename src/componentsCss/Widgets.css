@@ -1,4 +1,5 @@
 .widgets {
+    position: relative;
     border-radius: 10px;
     height: 300px;
     width: 330px;
@@ -10,14 +11,6 @@
     border-radius: 10px;
     background-color: var(--background-color-two);
     padding: 18px;
-}
-
-.widgets-bottom {
-    height: 300px;
-    border: 1px solid var(--font-light-color);
-    border-radius: 10px;
-    background-color: var(--background-color-two);
-    margin-top: 8px;
 }
 
 .widgets-top .top-one {
@@ -94,4 +87,48 @@
 .top-two .game .arrow-icon {
     margin-top: 7px !important;
     margin-left: 90px !important;
+}
+
+.widgets-bottom {
+    height: auto;
+    border-radius: 10px;
+    margin-top: 8px;
+    padding: 20px;
+}
+
+.bottom-about {
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+
+.bottom-about span {
+    margin: 0 15px;
+    color: var(--font-light-color);
+    cursor: pointer;
+}
+
+.bottom-about span:hover {
+    color: var(--font-bold-color);
+}
+
+.bottom-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.bottom-footer img {
+    object-fit: contain;
+    height: 18px;
+}
+
+.bottom-footer p {
+    font-size: 13px;
+    margin-left: 5px;
+    color: var(--font-bold-color);
+    font-weight: 500;
 }
