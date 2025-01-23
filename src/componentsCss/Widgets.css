@@ -42,6 +42,10 @@
     font-weight: 700;
 }
 
+.top-one p:hover {
+    background-color: var(--hover-back-color);
+}
+
 .top-one p span {
     font-weight: 500;
     color: var(--font-light-color);
@@ -65,6 +69,10 @@
     margin: 3px 0; 
 }
 
+.top-two .game:hover {
+    background-color: var(--hover-back-color);
+}
+
 .top-two .game img {
     object-fit: contain;
     height: 37px;
@@ -84,5 +92,6 @@
 }
 
 .top-two .game .arrow-icon {
+    margin-top: 7px !important;
     margin-left: 90px !important;
 }
