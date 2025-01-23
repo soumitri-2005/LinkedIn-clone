@@ -21,7 +21,7 @@ function App() {
           email: userAuth.email,
           uid: userAuth.uid,
           displayName: userAuth.displayName,
-          photoURL: userAuth.profilePic,          
+          photoUrl: userAuth.photoURL,          
         }))
       } else {
         // user is logged out
@@ -34,7 +34,6 @@ function App() {
     <div className="app">
       <Header />
 
-      {/* login */}
       {!user ? (
         <Login />
       ) : (
