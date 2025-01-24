@@ -12,6 +12,7 @@
     height: 70px;
     margin-top: 20px;
     margin-bottom: 20px;
+    filter: var(--image-color);
 }
 
 .login form {
@@ -27,6 +28,8 @@
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid var(--font-bold-color);
+    background-color: var(--background-color-two);
+    color: var(--font-bold-color);
 }
 
 .login form button {
@@ -48,4 +51,5 @@
 .login p {
     font-size: 14px;
     margin-top: 20px;
+    color: var(--font-bold-color);
 }

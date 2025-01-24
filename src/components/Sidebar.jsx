@@ -2,7 +2,7 @@ import React from "react";
 import "../componentsCss/Sidebar.css";
 import { Avatar } from "@mui/material";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
-import backPic from "../assets/linkedin bg (2).png";
+import backPic from "../assets/linkedin-bg.jpeg";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
@@ -25,7 +25,7 @@ const Sidebar = () => {
         <div className="top-profile">
           <img src={backPic} alt="" />
           <Avatar className="sidebar-avatar" src={user.photoUrl}>
-            {user.email[0]}
+            {user?.email[0]}
           </Avatar>
           <h2>{user.displayName}</h2>
           <h4>{user.email}</h4>

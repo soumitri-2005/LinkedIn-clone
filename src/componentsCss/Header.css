@@ -19,6 +19,7 @@
   object-fit: contain;
   height: 38px;
   margin-right: 7px;
+  filter: var(--image-color);
 }
 
 .header-search {
