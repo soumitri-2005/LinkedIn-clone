@@ -8,8 +8,15 @@ import Widgets from "./components/Widgets";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
+import { useLocalStorage } from "usehooks-ts";
 
 function App() {
+
+  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light');
+  const switchTheme = () => {
+    const newtheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newtheme);
+  }
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
@@ -31,8 +38,8 @@ function App() {
   }, [])
 
   return (
-    <div className="app">
-      <Header />
+    <div className="app" data-theme={theme}>
+      <Header switchTheme={switchTheme}/>
 
       {!user ? (
         <Login />
