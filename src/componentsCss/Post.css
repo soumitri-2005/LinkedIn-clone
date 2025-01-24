@@ -4,7 +4,7 @@
     margin-bottom: 10px;
     border-radius: 10px;
     margin-top: 12px;
-    border: 1px solid var(--font-bold-color);
+    border: 1px solid var(--border-color);
 }
 
 .post-header {
@@ -43,4 +43,10 @@
     margin: 10px 0;
     display: flex;
     justify-content: space-evenly;
+}
+
+hr {
+    width: 98%;
+    border: 1px solid var(--border-color);
+    margin: 12px auto 0;
 }

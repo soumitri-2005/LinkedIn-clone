@@ -16,6 +16,7 @@
   --search-back-color: #edf3f8;
   --hover-back-color: whitesmoke;
   --image-color: none;
+  --border-color: #8e8b8b62;
 }
 
 [data-theme= 'dark'] {
@@ -26,6 +27,7 @@
   --search-back-color: #384345;
   --hover-back-color: #55535389;
   --image-color: invert(99%) sepia(0%) saturate(2%) hue-rotate(77deg) brightness(107%) contrast(101%);
+  --border-color: #ababab19;
 }
 
 body {

@@ -11,7 +11,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
-import FlipMove from 'react-flip-move';
+import FlipMove from "react-flip-move";
 
 function Feed() {
   const user = useSelector(selectUser);
@@ -73,7 +73,10 @@ function Feed() {
         </div>
       </div>
 
-      <hr />
+      <div className="divison">
+        <hr className="division-line" />
+        <p>Sort by: Top</p>
+      </div>
 
       {/* post */}
       <FlipMove>
