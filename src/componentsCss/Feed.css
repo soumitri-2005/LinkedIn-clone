@@ -43,6 +43,7 @@
     font-weight: 600;
     background: none;
     cursor: pointer;
+    color: var(--font-bold-color);
 }
 
 .input-text button {
