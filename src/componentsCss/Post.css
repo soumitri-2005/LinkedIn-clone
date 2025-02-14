@@ -1,52 +1,52 @@
 .post {
-    background-color: var(--background-color-two);
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    margin-top: 12px;
-    border: 1px solid var(--border-color);
+  background-color: var(--background-color-two);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-top: 12px;
+  border: 1px solid var(--border-color);
 }
 
 .post-header {
-    display: flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .post-info {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .post-info h2 {
-    font-weight: 700;
-    font-size: 17px;
-    color: var(--font-bold-color);
-    line-height: 20px;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--font-bold-color);
+  line-height: 20px;
 }
 
 .post-info p {
-    font-size: 12px;
-    color: var(--font-light-color);
-    line-height: 18px;
+  font-size: 12px;
+  color: var(--font-light-color);
+  line-height: 18px;
 }
 
 .post-body {
-    overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 
 .post-body p {
-    font-weight: 500;
-    font-size: 14.5px;
-    color: var(--font-bold-color);
+  font-weight: 500;
+  font-size: 14.5px;
+  color: var(--font-bold-color);
 }
 
 .post-buttons {
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-evenly;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 hr {
-    width: 98%;
-    border: 1px solid var(--border-color);
-    margin: 12px auto 0;
+  width: 98%;
+  border: 1px solid var(--border-color);
+  margin: 12px auto 0;
 }

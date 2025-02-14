@@ -19,14 +19,15 @@
   --border-color: #8e8b8b62;
 }
 
-[data-theme= 'dark'] {
+[data-theme="dark"] {
   --background-color-one: #000000;
-  --background-color-two: #1B1F23;
-  --font-bold-color: #E9E9E9;
-  --font-light-color: #BBBCBD;
+  --background-color-two: #1b1f23;
+  --font-bold-color: #e9e9e9;
+  --font-light-color: #bbbcbd;
   --search-back-color: #384345;
   --hover-back-color: #55535389;
-  --image-color: invert(99%) sepia(0%) saturate(2%) hue-rotate(77deg) brightness(107%) contrast(101%);
+  --image-color: invert(99%) sepia(0%) saturate(2%) hue-rotate(77deg)
+    brightness(107%) contrast(101%);
   --border-color: #ababab19;
 }
 

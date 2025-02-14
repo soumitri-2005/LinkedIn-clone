@@ -1,135 +1,135 @@
 .widgets {
-    position: relative;
-    border-radius: 10px;
-    height: 300px;
-    width: 330px;
+  position: relative;
+  border-radius: 10px;
+  height: 300px;
+  width: 330px;
 }
 
 .widgets-top {
-    height: 550px;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    background-color: var(--background-color-two);
-    padding: 18px;
+  height: 550px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--background-color-two);
+  padding: 18px;
 }
 
 .widgets-top .top-one {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: var(--font-bold-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--font-bold-color);
 }
 
 .top-one h2 {
-    font-size: 18px;
-    line-height: 25px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .top-one h2 span {
-    font-size: 14px;
-    font-weight: 600;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .top-one p {
-    font-size: 13px;
-    font-weight: 700;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .top-one p:hover {
-    background-color: var(--hover-back-color);
+  background-color: var(--hover-back-color);
 }
 
 .top-one p span {
-    font-weight: 500;
-    color: var(--font-light-color);
+  font-weight: 500;
+  color: var(--font-light-color);
 }
 
 .top-two {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: var(--font-bold-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--font-bold-color);
 }
 
 .top-two h2 {
-    font-size: 16px;
-    margin: 20px 0 0 0;
-    font-weight: 600;
+  font-size: 16px;
+  margin: 20px 0 0 0;
+  font-weight: 600;
 }
 
 .top-two .game {
-    display: flex;
-    margin: 3px 0; 
+  display: flex;
+  margin: 3px 0;
 }
 
 .top-two .game:hover {
-    background-color: var(--hover-back-color);
+  background-color: var(--hover-back-color);
 }
 
 .top-two .game img {
-    object-fit: contain;
-    height: 37px;
-    border-radius: 3px;
-    border: 1px solid var(--border-color);
-    margin: 0 10px 0 0;
+  object-fit: contain;
+  height: 37px;
+  border-radius: 3px;
+  border: 1px solid var(--border-color);
+  margin: 0 10px 0 0;
 }
 
 .top-two .game p {
-    font-size: 13px;
-    font-weight: 700;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .top-two p span {
-    font-weight: 500;
-    color: var(--font-light-color);
+  font-weight: 500;
+  color: var(--font-light-color);
 }
 
 .top-two .game .arrow-icon {
-    margin-top: 7px !important;
-    margin-left: 90px !important;
+  margin-top: 7px !important;
+  margin-left: 90px !important;
 }
 
 .widgets-bottom {
-    height: auto;
-    border-radius: 10px;
-    margin-top: 8px;
-    padding: 20px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 8px;
+  padding: 20px;
 }
 
 .bottom-about {
-    display: flex;
-    gap: 7px;
-    flex-direction: column;
-    align-items: center;
-    font-size: 12px;
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
 }
 
 .bottom-about span {
-    margin: 0 15px;
-    color: var(--font-light-color);
-    cursor: pointer;
+  margin: 0 15px;
+  color: var(--font-light-color);
+  cursor: pointer;
 }
 
 .bottom-about span:hover {
-    color: var(--font-bold-color);
+  color: var(--font-bold-color);
 }
 
 .bottom-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
 }
 
 .bottom-footer img {
-    object-fit: contain;
-    height: 18px;
-    filter: var(--image-color);
+  object-fit: contain;
+  height: 18px;
+  filter: var(--image-color);
 }
 
 .bottom-footer p {
-    font-size: 13px;
-    margin-left: 5px;
-    color: var(--font-bold-color);
-    font-weight: 500;
+  font-size: 13px;
+  margin-left: 5px;
+  color: var(--font-bold-color);
+  font-weight: 500;
 }

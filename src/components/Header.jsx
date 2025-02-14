@@ -8,18 +8,17 @@ import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ChatIcon from "@mui/icons-material/Chat";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import ContrastIcon from '@mui/icons-material/Contrast';
+import ContrastIcon from "@mui/icons-material/Contrast";
 import { useDispatch } from "react-redux";
 import { logout } from "../features/userSlice";
 import { auth } from "../firebase";
 
-
 const Header = ({ switchTheme }) => {
   const dispatch = useDispatch();
   const logOutApp = () => {
-    dispatch(logout())
+    dispatch(logout());
     auth.signOut();
-  }
+  };
 
   return (
     <div className="header">
@@ -27,7 +26,7 @@ const Header = ({ switchTheme }) => {
         <img src={linedinLogo} alt="" />
         <div className="header-search">
           <SearchIcon />
-          <input type="text" placeholder="Search"/>
+          <input type="text" placeholder="Search" />
         </div>
       </div>
 
@@ -37,7 +36,11 @@ const Header = ({ switchTheme }) => {
         <HeaderOptions Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOptions Icon={ChatIcon} title="Messaging" />
         <HeaderOptions Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOptions Icon={ContrastIcon} title="Theme" onClick={switchTheme}/>
+        <HeaderOptions
+          Icon={ContrastIcon}
+          title="Theme"
+          onClick={switchTheme}
+        />
         <HeaderOptions avatar={true} title="Me" onClick={logOutApp} />
       </div>
     </div>

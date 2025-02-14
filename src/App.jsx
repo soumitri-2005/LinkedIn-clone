@@ -11,35 +11,37 @@ import { auth } from "./firebase";
 import { useLocalStorage } from "usehooks-ts";
 
 function App() {
-
-  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light');
+  const [theme, setTheme] = useLocalStorage("theme" ? "dark" : "light");
   const switchTheme = () => {
-    const newtheme = theme === 'light' ? 'dark' : 'light';
+    const newtheme = theme === "light" ? "dark" : "light";
     setTheme(newtheme);
-  }
+  };
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    auth.onAuthStateChanged(userAuth => {
+    auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
         // user is logged in
-        dispatch(login({
-          email: userAuth.email,
-          uid: userAuth.uid,
-          displayName: userAuth.displayName,
-          photoUrl: userAuth.photoURL,          
-        }))
+        dispatch(
+          login({
+            // to display user info in screen
+            email: userAuth.email,
+            uid: userAuth.uid,
+            displayName: userAuth.displayName,
+            photoUrl: userAuth.photoURL,
+          })
+        );
       } else {
         // user is logged out
         dispatch(logout());
       }
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div className="app" data-theme={theme}>
-      <Header switchTheme={switchTheme}/>
+      <Header switchTheme={switchTheme} />
 
       {!user ? (
         <Login />
